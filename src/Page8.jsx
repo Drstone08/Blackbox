@@ -34,7 +34,7 @@ function Page8() {
       const data = { roll, team, name, score, date: timestamp };
 
       try {
-        await addDoc(collection(db, "teamDetails_blackbox"), data);
+        await addDoc(collection(db, "results_blackbox"), data);
         console.log("Data saved successfully");
         navigate("/final", {
           state: { roll, team, name, score, date: timestamp },
