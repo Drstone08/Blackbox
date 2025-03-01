@@ -126,7 +126,7 @@ function Page4() {
           <div className="flex-grow">
             <div className="flex flex-col space-y-4">
               <input
-                type="text"
+                type="password"
                 value={ans2}
                 onChange={(e) => setans2(e.target.value)}
                 className="w-full px-4 py-2 border text-white font-mono border-violet-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
