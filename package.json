@@ -1,5 +1,7 @@
 {
   "name": "frontend",
+  "homepage": "https://Drstone08.github.io/Blackbox/",
+
   "private": true,
   "version": "0.0.0",
   "type": "module",
