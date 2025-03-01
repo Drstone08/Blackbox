@@ -9,6 +9,7 @@ function Page1() {
   const [flag, setFlag] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const hnt= import.meta.env.VITE_HINT1;
 
   const { roll, team, name } = location.state || {};
   let { score } = location.state;
@@ -20,7 +21,7 @@ function Page1() {
   };
 
   const handleSubmit = async () => {
-    if (ans1.toUpperCase() === "AA") {
+    if (ans1.toLowerCase() === import.meta.env.VITE_ANS1) {
       try {
         const date = getCurrentTime();
         if (hintused) {
@@ -106,10 +107,7 @@ function Page1() {
             {hint && (
               <div className="h-full w-[300px]">
                 <p className="text-lg text-red-500 mt-2 bg-gray-900 px-3 py-1 rounded-md shadow-md">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Molestias ab dignissimos nobis! Placeat, facilis eveniet autem
-                  ipsa nisi cupiditate molestias quasi, deserunt consectetur ex
-                  fugit voluptatum inventore numquam, sunt eaque!
+                  {hnt}
                 </p>
               </div>
             )}

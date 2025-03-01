@@ -12,9 +12,10 @@ function Page4() {
   let { score } = location.state;
   const [ans2, setans2] = useState("");
   const [flag, setFlag] = useState(false);
+  const hnt= import.meta.env.VITE_HINT4;
 
   const handleSubmit = async () => {
-    if (ans2.toUpperCase() === "AA") {
+    if (ans2.toLowerCase() === import.meta.env.VITE_ANS4) {
       const now = new Date();
       let hours = now.getHours();
       const minutes = now.getMinutes().toString().padStart(2, "0");
@@ -115,10 +116,7 @@ function Page4() {
             {hint && (
               <div className="h-full w-[300px]">
                 <p className="text-lg text-red-500 mt-2 bg-gray-900 px-3 py-1 rounded-md shadow-md">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Molestias ab dignissimos nobis! Placeat, facilis eveniet autem
-                  ipsa nisi cupiditate molestias quasi, deserunt consectetur ex
-                  fugit voluptatum inventore numquam, sunt eaque!
+                  {hnt}
                 </p>
               </div>
             )}

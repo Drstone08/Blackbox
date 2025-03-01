@@ -13,9 +13,10 @@ function Page6() {
   const [score, setScore] = useState(location.state?.score || 0);
   const [ans2, setAns2] = useState("");
   const [flag, setFlag] = useState(false);
+  const hnt= import.meta.env.VITE_HINT6;
 
   const handleSubmit = async () => {
-    if (ans2.toUpperCase() === "AA") {
+    if (ans2.toLowerCase() === import.meta.env.VITE_ANS6) {
       const now = new Date();
       const formattedHours = now.getHours() % 12 || 12;
       const minutes = now.getMinutes().toString().padStart(2, "0");
@@ -86,7 +87,7 @@ function Page6() {
 
           {hint && (
             <div className="h-full w-[300px] mt-2 bg-gray-900 px-3 py-1 rounded-md shadow-md">
-              <p className="text-lg text-red-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p className="text-lg text-red-500">{hnt}</p>
             </div>
           )}
         </div>
